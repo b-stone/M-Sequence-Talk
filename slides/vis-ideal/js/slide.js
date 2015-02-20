@@ -4,13 +4,13 @@ if(typeof this.substeps == 'undefined') {
   console.log(this.substeps);
 }
 
-var src = null;
+//var src = null;
 var parentWindow = window.parent;
 
 window.onload = setup;
 
 function setup() {
-  src = parentWindow.document.getElementById(window.name).src;
+//  src = parentWindow.document.getElementById(window.name).src;
   // setupCode();
   
   window.onmessage = receiveMessage;
