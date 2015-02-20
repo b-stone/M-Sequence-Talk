@@ -1,0 +1,37 @@
+h1. Slides for MathFest 2013 
+
+These slides were presented at MathFest 2013 in Hartford, CT during the Developments in Commutative Algebra Invited Paper Session. For a working web version see here: 
+
+"http://math.bard.edu/~bstone/mathfest2013/#1":http://math.bard.edu/~bstone/mathfest2013/#1
+
+h2. Usage
+
+h3. First Clone the Repository
+
+<pre>
+user:~$ git clone https://github.com/b-stone/MathFest-2013.git
+user:~$ cd MathFest-2013
+</pre>
+
+h3. Download MathJax
+
+The slides need MathJax to translate the LaTeX to html.  The easiest way to get it is to clone the repo.
+
+<pre>
+user:~/MathFest-2013$ git clone https://github.com/mathjax/MathJax.git
+</pre>
+
+This creates a directory 'MathJax' in the 'MathFest-2013' folder. Depending on your OS, you might have to change the folder name to 'mathjax'. 
+
+h3. View
+
+You can start up a local webserver by using python's simple server:
+
+<pre>
+user:~/MathFest-2013$ python -m SimpleHTTPServer 3000
+</pre>
+
+Now go to "http://0.0.0.0:3000":http://0.0.0.0:3000/ in your browser to view the slides.
+
+
+

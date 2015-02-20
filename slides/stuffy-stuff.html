@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <link type="text/css"  rel="stylesheet" href="../js/highlight.js/styles/tomorrow-night-bright.css">
+    <script type="text/javascript" src="../js/highlight.js/highlight.pack.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    
+    <script type="text/javascript" src="../mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <style type="text/css">
+      .diffa .highlight {
+        background-color: #FFFF66;
+      }
+      .diffb .highlight {
+        background-color: #33CCFF;
+      }
+      .diffc .highlight {
+        background-color: #00FF99;
+      }
+
+
+    </style>
+    <script type="text/javascript" src="../js/d3.v3.js"></script>
+    <script type="text/javascript" src="../js/slide.js"></script>
+
+   <script type="text/javascript">
+      var substeps = ['one', '11', '12', '21', '22'];
+
+      function step(cur_step) {
+   		if(cur_step == '11') {
+		   $('table').highlight('1')
+		   $('table').highlight('4')		
+		   $('table').highlight('6')		
+		 } else if(cur_step == '12') {
+		   $('table').unhighlight('1')
+		   $('table').unhighlight('4')		
+		   $('table').unhighlight('6')		
+		   $('table').highlight('5')
+		   $('table').highlight('2')		
+		   $('table').highlight('9')				
+		 } else if(cur_step == '21') {
+		   $('table').unhighlight('5')
+		   $('table').unhighlight('2')		
+		   $('table').unhighlight('9')				
+		   $('table').highlight('0')
+		   $('table').highlight('7')
+		 } else if(cur_step == '22') {
+		   $('table').unhighlight('0')
+		   $('table').unhighlight('7')
+		   $('table').highlight('3')
+		   $('table').highlight('-3')
+		   $('table').highlight('8')		
+		};
+		d3.select("#" + cur_step).style("display", "inherit")
+      };
+    </script>
+
+  </head>
+  <body>
+	
+    <h2>Practice slide</h2>
+
+		
+		<div id="one" style="display:none;">
+		
+		<h1 class="small">$M$-sequences</h1>
+		
+		<p>		
+		<!-- matrix expression begin -->
+		<table style="margin: 0px auto;" style="color:#000"><tr>
+			<td align="left" valign="right" width=50></td>
+			<td><table border=0 cellpadding=0 cellspacing=0px style="border-left:0px solid #000; border-right:0px solid #000; color:#000"><tr>
+			<td style ="border-top:0px solid #000; border-bottom:0px solid #000;">&nbsp</td><td><table border=0 cellpadding=0 cellspacing=0 style="color:#000;">
+			<tr>
+			<td class="diffa" align="right" valign="center" width=100>1</td>
+			<td class="diffa" align="right" valign="center" width=100>2</td>
+			<td class="diffa" align="right" valign="center" width=100>3</td>
+			<td class="diffa" align="right" valign="center" width=100>4</td>
+			<td class="diffa" align="right" valign="center" width=100>5</td>
+			<td class="diffa" align="right" valign="center" width=100>6</td>
+			<td class="diffa" align="right" valign="center" width=100>7</td>
+			</tr>
+			<tr>
+			<td class="diffa" align="right" valign="center" width=100>(1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,1,1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,1,1,1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,1,1,1,1,1,1)</td>
+			</tr>
+            <tr>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1,1,1)</td>
+			</tr>
+			<tr>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100>(1,3)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,3,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,3,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,3,1,1,1)</td>
+			</tr>
+			<tr>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100>(1,4)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,4,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,4,1,1)</td>
+			</tr>
+			<tr>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1,1,1)</td>
+			</tr>
+			<tr>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100></td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1,1)</td>
+			<td class="diffa" align="right" valign="center" width=100>(1,2,1,1,1,1)</td>
+			</tr>
+			
+              
+				<!-- matrix expression end -->
+		</p>
+		
+	</div>
+	
+
+
+		
+
+
+
+
+
+	
+
+
+
+  </body>
+</html>
